@@ -1,6 +1,6 @@
 {
   "name": "cosmicvelocity-commons-js",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "It provides reusable components with small granularity.",
   "keywords": [
     "es6",
@@ -18,9 +18,13 @@
   "files": [
     "build"
   ],
+  "directories": {
+    "lib": "build"
+  },
   "scripts": {
     "build": "node --max_old_space_size=8192 node_modules/babel-cli/bin/babel.js src --out-dir build",
-    "test": "node --max_old_space_size=8192 node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=test node_modules/jest/bin/jest.js"
+    "test": "node --max_old_space_size=8192 node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=test node_modules/jest/bin/jest.js",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -39,7 +43,8 @@
     "eslint-plugin-node": "^5.2.1",
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
-    "jest": "^21.2.1"
+    "jest": "^21.2.1",
+    "jsdom": "^11.5.1"
   },
   "browserslist": [
     "> 1%",
@@ -60,7 +65,6 @@
       "node_modules"
     ],
     "roots": [
-      "<rootDir>/src",
       "<rootDir>/test"
     ],
     "testRegex": "/test/.*\\.js$",

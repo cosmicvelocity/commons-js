@@ -9,6 +9,8 @@
 
 import addAll from './array/addAll';
 import isArray from './array/isArray';
+import max from './array/max';
+import min from './array/min';
 import of from './array/of';
 import swap from './array/swap';
 
@@ -18,6 +20,8 @@ import swap from './array/swap';
 export default {
     addAll: addAll,
     isArray: isArray,
+    max: max,
+    min: min,
     of: of,
     swap: swap
 };

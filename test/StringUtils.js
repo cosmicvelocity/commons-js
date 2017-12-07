@@ -1,6 +1,7 @@
 "use strict";
 
 import StringUtils from '../src/StringUtils';
+import findUrls from "../src/string/findUrls";
 
 describe('StringUtils#chomp', () => {
 
@@ -26,6 +27,18 @@ describe('StringUtils#chomp', () => {
 
 });
 
+describe('StringUtils#findUrls', () => {
+
+    it('hit', () => {
+        expect(StringUtils.findUrls('Hello !! World !! http://www.google.com/ Hello !! World !!')).toEqual(['http://www.google.com/']);
+    });
+
+    it('not hit', () => {
+        expect(StringUtils.findUrls('Hello !! World !!')).toEqual([]);
+    });
+
+});
+
 describe('StringUtils#isEmpty', () => {
 
     it('is true', () => {
@@ -46,6 +59,19 @@ describe('StringUtils#isNotEmpty', () => {
 
     it('is false', () => {
         expect(StringUtils.isNotEmpty('')).toBe(false);
+    });
+
+});
+
+describe('StringUtils#isNullOrEmpty', () => {
+
+    it('is true', () => {
+        expect(StringUtils.isNullOrEmpty('')).toBe(true);
+        expect(StringUtils.isNullOrEmpty(null)).toBe(true);
+    });
+
+    it('is false', () => {
+        expect(StringUtils.isNullOrEmpty('Hello !!')).toBe(false);
     });
 
 });

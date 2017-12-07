@@ -29,6 +29,26 @@ describe('ArrayUtils#isArray', () => {
 
 });
 
+describe('ArrayUtils#max', () => {
+
+    it('max', () => {
+        expect(ArrayUtils.max([1, 2, 3])).toBe(3);
+        expect(ArrayUtils.max([3, 1, 2])).toBe(3);
+        expect(ArrayUtils.max([1, 3, 2])).toBe(3);
+    });
+
+});
+
+describe('ArrayUtils#min', () => {
+
+    it('min', () => {
+        expect(ArrayUtils.min([1, 2, 3])).toBe(1);
+        expect(ArrayUtils.min([3, 1, 2])).toBe(1);
+        expect(ArrayUtils.min([1, 3, 2])).toBe(1);
+    });
+
+});
+
 describe('ArrayUtils#of', () => {
 
     it('of', () => {

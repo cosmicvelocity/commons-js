@@ -9,8 +9,10 @@
 
 import chomp from './string/chomp';
 import convertHtml from './string/convertHtml';
+import findUrls from './string/findUrls';
 import isEmpty from './string/isEmpty';
 import isNotEmpty from './string/isNotEmpty';
+import isNullOrEmpty from './string/isNullOrEmpty';
 import nl2br from './string/nl2br';
 import toLowerCase from './string/toLowerCase';
 import toUpperCase from './string/toUpperCase';
@@ -22,8 +24,10 @@ import url2anchor from './string/url2anchor';
 export default {
     chomp: chomp,
     convertHtml: convertHtml,
+    findUrls: findUrls,
     isEmpty: isEmpty,
     isNotEmpty: isNotEmpty,
+    isNullOrEmpty: isNullOrEmpty,
     nl2br: nl2br,
     toLowerCase: toLowerCase,
     toUpperCase: toUpperCase,
