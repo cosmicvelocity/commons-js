@@ -14,7 +14,7 @@
   "bugs": {
     "url": "https://github.com/cosmicvelocity/commons-js/issues"
   },
-  "main": "index.js",
+  "main": "build/index.js",
   "files": [
     "build"
   ],
