@@ -1,27 +1,44 @@
 {
   "name": "cosmicvelocity-commons-js",
   "version": "0.0.1",
-  "description": "",
+  "description": "It provides reusable components with small granularity.",
+  "keywords": [
+    "es6",
+    "modules",
+    "util"
+  ],
+  "author": "Kouichi Machida <k-machida@aideo.co.jp>",
+  "license": "Apache-2.0",
+  "private": false,
+  "homepage": "https://github.com/cosmicvelocity/commons-js#readme",
+  "bugs": {
+    "url": "https://github.com/cosmicvelocity/commons-js/issues"
+  },
+  "main": "index.js",
+  "files": [
+    "build"
+  ],
   "scripts": {
+    "build": "node --max_old_space_size=8192 node_modules/babel-cli/bin/babel.js src --out-dir build",
     "test": "node --max_old_space_size=8192 node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=test node_modules/jest/bin/jest.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cosmicvelocity/commons-js.git"
   },
-  "author": "Kouichi Machida <k-machida@aideo.co.jp>",
-  "license": "Apache-2.0",
-  "private": true,
-  "bugs": {
-    "url": "https://github.com/cosmicvelocity/commons-js/issues"
-  },
-  "homepage": "https://github.com/cosmicvelocity/commons-js#readme",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "cross-env": "^5.1.1",
+    "eslint": "^4.12.1",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
     "jest": "^21.2.1"
   },
   "browserslist": [
@@ -43,8 +60,10 @@
       "node_modules"
     ],
     "roots": [
-      "<rootDir>/src/"
+      "<rootDir>/src",
+      "<rootDir>/test"
     ],
+    "testRegex": "/test/.*\\.js$",
     "verbose": true
   }
 }
