@@ -1,6 +1,6 @@
 {
   "name": "cosmicvelocity-commons-js",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "It provides reusable components with small granularity.",
   "keywords": [
     "es6",
@@ -29,6 +29,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cosmicvelocity/commons-js.git"
+  },
+  "dependencies": {
+    "moment": "^2.19.3"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
