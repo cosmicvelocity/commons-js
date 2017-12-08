@@ -14,5 +14,5 @@
  * @returns {boolean} 文字列が null または長さ 0 の文字列だった場合 true, それ以外は false 。
  */
 export default function (s) {
-    return s === null || s.length === 0;
+    return s === null || (Object.prototype.toString.call(s) === '[object String]' && s.length === 0);
 }

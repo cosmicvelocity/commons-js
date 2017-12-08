@@ -8,6 +8,7 @@
 "use strict";
 
 import moment from 'moment/moment';
+import isNullOrEmpty from '../string/isNullOrEmpty';
 import defaultFormatPattern from './defaultFormatPattern';
 
 /**
@@ -20,9 +21,9 @@ import defaultFormatPattern from './defaultFormatPattern';
  * @return {string|null} 書式化された文字列。
  */
 export default function (value, defaultValue = null, format = defaultFormatPattern, locale = null) {
-    const date = moment(value);
+    let date;
 
-    if (date.isValid()) {
+    if (!isNullOrEmpty(value) && (date = moment(value)).isValid()) {
         const oldLocale = moment.locale();
 
         if (locale !== null) {
