@@ -5,7 +5,7 @@
  * file that was distributed with this source code.
  */
 
-"use strict";
+'use strict';
 
 import max from '../array/max';
 import min from '../array/min';
@@ -34,7 +34,7 @@ const emptyRect = {
  *      bottom: number,
  *      width: number,
  *      height: number
- *      }} 領域を表すオブジェクト。
+ * }} 領域を表すオブジェクト。
  */
 export default function (arr, offsetX = 0, offsetY = 0, marginX = 0, marginY = 0) {
     if (!Array.isArray(arr)) {

@@ -5,7 +5,7 @@
  * file that was distributed with this source code.
  */
 
-"use strict";
+'use strict';
 
 /**
  * 指定された配列の要素をすべて追加します。

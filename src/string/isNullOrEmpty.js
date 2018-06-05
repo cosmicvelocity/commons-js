@@ -5,7 +5,7 @@
  * file that was distributed with this source code.
  */
 
-"use strict";
+'use strict';
 
 /**
  * 文字列が null または 0 バイト文字列か取得します。

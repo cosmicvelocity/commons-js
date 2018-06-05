@@ -12,6 +12,7 @@ import attrAsNumber from './dom/attrAsNumber';
 import expansionRects from './dom/expansionRects';
 import getBoundingClientRect from './dom/getBoundingClientRect';
 import getBoundingClientRects from './dom/getBoundingClientRects';
+import getPixelWidth from './dom/getPixelWidth';
 import location from './dom/location';
 import scrollTop from './dom/scrollTop';
 import text from './dom/text';
@@ -25,6 +26,7 @@ export default {
     expansionRects: expansionRects,
     getBoundingClientRect: getBoundingClientRect,
     getBoundingClientRects: getBoundingClientRects,
+    getPixelWidth: getPixelWidth,
     location: location,
     scrollTop: scrollTop,
     text: text

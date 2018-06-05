@@ -5,7 +5,7 @@
  * file that was distributed with this source code.
  */
 
-"use strict";
+'use strict';
 
 const compare = (x, y) => x - y;
 
@@ -17,7 +17,7 @@ const compare = (x, y) => x - y;
  * @returns {*|undefined} 配列中の最大値、要素がない配列の場合 undefined 。
  */
 export default function (arr, comp = compare) {
-    let result = undefined;
+    let result;
 
     if (Array.isArray(arr)) {
         for (let index = 0; index < arr.length; index++) {

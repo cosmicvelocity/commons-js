@@ -5,7 +5,7 @@
  * file that was distributed with this source code.
  */
 
-"use strict";
+'use strict';
 
 /**
  * URL をアンカーにします。
@@ -26,6 +26,7 @@ export default function (s, defaultValue = null, options = {}) {
             className: null
         }, options);
 
+        /* eslint no-irregular-whitespace: "off" */
         return s
             .replace(/(https?)(:\/\/[^\s　]+)/g, function (match) {
                 if (opt.className) {

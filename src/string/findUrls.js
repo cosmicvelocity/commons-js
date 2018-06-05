@@ -5,10 +5,11 @@
  * file that was distributed with this source code.
  */
 
-"use strict";
+'use strict';
 
 import isNullOrEmpty from './isNullOrEmpty';
 
+/* eslint no-useless-escape: "off" */
 const compileUrl = new RegExp('(https?)(:\/\/[^\\s　\\|]+)', 'g');
 
 /**

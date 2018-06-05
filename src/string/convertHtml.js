@@ -5,10 +5,10 @@
  * file that was distributed with this source code.
  */
 
-"use strict";
+'use strict';
 
-import nl2br from "./nl2br";
-import url2anchor from "./url2anchor";
+import nl2br from './nl2br';
+import url2anchor from './url2anchor';
 
 /**
  * 文字列の改行を <br/> に変換しつつ、URL をリンクにします。

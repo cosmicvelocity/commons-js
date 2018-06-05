@@ -5,11 +5,11 @@
  * file that was distributed with this source code.
  */
 
-"use strict";
+'use strict';
 
 import defaultFormatPattern from './date/defaultFormatPattern';
 import format from './date/format';
-import now from "./date/now";
+import now from './date/now';
 
 /**
  * 日時に関するコンビニエンスメソッドを提供します。

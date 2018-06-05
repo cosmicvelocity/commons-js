@@ -7,12 +7,12 @@
 
 'use strict';
 
-import ArrayUtils from "./ArrayUtils";
-import DateUtils from "./DateUtils";
-import DomUtils from "./DomUtils";
-import FileUtils from "./FileUtils";
-import NumberUtils from "./NumberUtils";
-import StringUtils from "./StringUtils";
+import ArrayUtils from './ArrayUtils';
+import DateUtils from './DateUtils';
+import DomUtils from './DomUtils';
+import FileUtils from './FileUtils';
+import NumberUtils from './NumberUtils';
+import StringUtils from './StringUtils';
 
 export {
     ArrayUtils,

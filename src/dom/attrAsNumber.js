@@ -5,9 +5,9 @@
  * file that was distributed with this source code.
  */
 
-"use strict";
+'use strict';
 
-import attr from "./attr";
+import attr from './attr';
 
 /**
  * 属性値を取得します。

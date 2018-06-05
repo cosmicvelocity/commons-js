@@ -5,7 +5,7 @@
  * file that was distributed with this source code.
  */
 
-"use strict";
+'use strict';
 
 /**
  * NaN かどうかを判定します。
@@ -14,5 +14,6 @@
  * @returns {boolean} NaN である場合 true, それ以外は false 。
  */
 export default function (value) {
+    /* eslint no-self-compare: "off" */
     return typeof value === 'number' && value !== value;
 }

@@ -5,9 +5,9 @@
  * file that was distributed with this source code.
  */
 
-"use strict";
+'use strict';
 
-import getBoundingClientRect from "./getBoundingClientRect";
+import getBoundingClientRect from './getBoundingClientRect';
 
 /**
  * 指定したセレクタの getBoundingClientRect を取得して返します。

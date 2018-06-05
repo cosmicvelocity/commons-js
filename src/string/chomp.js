@@ -5,9 +5,9 @@
  * file that was distributed with this source code.
  */
 
-"use strict";
+'use strict';
 
-import isEmpty from "./isEmpty";
+import isEmpty from './isEmpty';
 
 /**
  * 行末の改行コードを除去します。
@@ -22,11 +22,11 @@ export default function (s) {
 
     let lastIndex = s.length - 1;
 
-    if (s[lastIndex] === "\n") {
-        if (s[lastIndex - 1] === "\r") {
+    if (s[lastIndex] === '\n') {
+        if (s[lastIndex - 1] === '\r') {
             lastIndex--;
         }
-    } else if (s[lastIndex] !== "\r") {
+    } else if (s[lastIndex] !== '\r') {
         lastIndex++;
     }
 

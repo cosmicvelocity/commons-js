@@ -5,7 +5,7 @@
  * file that was distributed with this source code.
  */
 
-"use strict";
+'use strict';
 
 import defaultFormatPattern from './defaultFormatPattern';
 import formatFunction from './format';

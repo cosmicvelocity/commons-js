@@ -5,7 +5,7 @@
  * file that was distributed with this source code.
  */
 
-"use strict";
+'use strict';
 
 import isNullOrEmpty from '../string/isNullOrEmpty';
 

@@ -5,7 +5,7 @@
  * file that was distributed with this source code.
  */
 
-"use strict";
+'use strict';
 
 const defaultOptions = {
 
@@ -37,7 +37,7 @@ const defaultOptions = {
  *      callback: Function,
  *      multiple: boolean,
  *      accept: string
- *      }} options オプション設定。
+ * }} options オプション設定。
  */
 export default function (options) {
     // デフォルトパラメーターを設定します。

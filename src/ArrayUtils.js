@@ -11,7 +11,9 @@ import addAll from './array/addAll';
 import isArray from './array/isArray';
 import max from './array/max';
 import min from './array/min';
+import moveAt from './array/moveAt';
 import of from './array/of';
+import range from './array/range';
 import swap from './array/swap';
 
 /**
@@ -22,6 +24,8 @@ export default {
     isArray: isArray,
     max: max,
     min: min,
+    moveAt: moveAt,
     of: of,
+    range: range,
     swap: swap
 };
