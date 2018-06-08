@@ -9,6 +9,7 @@
 
 import defaultFormatPattern from './date/defaultFormatPattern';
 import format from './date/format';
+import japaneseEra from './date/japaneseEra';
 import now from './date/now';
 
 /**
@@ -22,6 +23,13 @@ export default {
      * @type {string}
      */
     DEFAULT_FORMAT_PATTERN: defaultFormatPattern,
+
+    /**
+     * 和暦のリストを表します。
+     *
+     * @type {[]}
+     */
+    JAPANESE_ERA: japaneseEra,
 
     /**
      * 日付を表す文字列を初期化して返します。
