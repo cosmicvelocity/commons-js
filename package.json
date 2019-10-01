@@ -1,6 +1,6 @@
 {
   "name": "@cosmicvelocity/commons-js",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "It provides reusable components with small granularity.",
   "keywords": [
     "es6",
