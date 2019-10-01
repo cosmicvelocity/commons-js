@@ -1,6 +1,6 @@
 {
   "name": "@cosmicvelocity/commons-js",
-  "version": "0.0.8",
+  "version": "0.1.1",
   "description": "It provides reusable components with small granularity.",
   "keywords": [
     "es6",
@@ -14,7 +14,7 @@
   "bugs": {
     "url": "https://github.com/cosmicvelocity/commons-js/issues"
   },
-  "main": "build/index.js",
+  "main": "build/src/index.js",
   "files": [
     "build"
   ],
@@ -22,7 +22,9 @@
     "lib": "build"
   },
   "scripts": {
-    "build": "node --max_old_space_size=8192 node_modules/babel-cli/bin/babel.js src --out-dir build",
+    "build": "node --max_old_space_size=8192 node_modules/typescript/bin/tsc",
+    "lint": "node --max_old_space_size=8192 node_modules/tslint/bin/tslint src/**/*.ts test/**/*.ts",
+    "lint-fix": "node --max_old_space_size=8192 node_modules/tslint/bin/tslint --fix src/**/*.ts test/**/*.ts",
     "test": "node --max_old_space_size=8192 node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=test node_modules/jest/bin/jest.js",
     "prepare": "npm run build"
   },
@@ -30,24 +32,17 @@
     "type": "git",
     "url": "git+https://github.com/cosmicvelocity/commons-js.git"
   },
-  "dependencies": {
-    "moment": "^2.19.3"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.24.1",
+    "@types/jest": "^24.0.15",
+    "@types/moment": "^2.13.0",
     "cross-env": "^5.1.1",
-    "eslint": "^4.12.1",
-    "eslint-config-standard": "^10.2.1",
-    "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-node": "^5.2.1",
-    "eslint-plugin-promise": "^3.6.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "jest": "^21.2.1",
-    "jsdom": "^11.5.1"
+    "jest": "^24.8.0",
+    "jsdom": "^11.5.1",
+    "moment": "^2.24.0",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.2"
   },
   "browserslist": [
     "> 1%",
@@ -61,8 +56,14 @@
     "Android >= 4.4"
   ],
   "jest": {
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "tsconfig.json"
+      }
+    },
     "moduleFileExtensions": [
-      "js"
+      "js",
+      "ts"
     ],
     "moduleDirectories": [
       "node_modules"
@@ -70,7 +71,10 @@
     "roots": [
       "<rootDir>/test"
     ],
-    "testRegex": "/test/.*\\.js$",
+    "testRegex": "/test/.*\\.ts$",
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
     "verbose": true
   }
 }
