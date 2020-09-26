@@ -8,7 +8,7 @@
 "use strict";
 
 export interface INl2brOptions {
-    isXML: boolean;
+  isXML: boolean;
 }
 
 /**
@@ -20,10 +20,20 @@ export interface INl2brOptions {
  *      isXML : <br> を明示的に閉じる場合 true 。
  * @returns 改行が <br/> に変換された文字列、もしくはデフォルト文字列。
  */
-export default function(s: string, defaultValue: string = "", options?: INl2brOptions): string {
-    const opt = Object.assign({}, {
-        isXML: true,
-    }, options);
+export default function (
+  s: string,
+  defaultValue = "",
+  options?: INl2brOptions
+): string {
+  const opt = Object.assign(
+    {},
+    {
+      isXML: true,
+    },
+    options
+  );
 
-    return s ? s.replace(/\r?\n/g, opt.isXML ? "<br />" : "<br>") : (defaultValue || "");
+  return s
+    ? s.replace(/\r?\n/g, opt.isXML ? "<br />" : "<br>")
+    : defaultValue || "";
 }

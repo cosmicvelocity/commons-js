@@ -10,8 +10,8 @@
  *
  * @returns 取得された offsetTop の値。
  */
-export default function(): number {
-    return (document && document.defaultView) ?
-        document.defaultView.pageYOffset :
-        0;
+export default function (): number {
+  return document && document.defaultView
+    ? document.defaultView.pageYOffset
+    : 0;
 }

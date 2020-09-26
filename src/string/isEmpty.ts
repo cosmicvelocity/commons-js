@@ -11,6 +11,6 @@
  * @param s 対象の文字列。
  * @returns 文字列が null, 0 バイト文字列なら true, それ以外は false 。
  */
-export default function(s: any): boolean {
-    return !s;
+export default function (s: any): boolean {
+  return !s;
 }

@@ -12,17 +12,17 @@
  * @param end 終了する値。
  * @returns 省略した場合、0 から start の値となる。
  */
-export default function(start: number, end?: number): number[] {
-    const out = [];
+export default function (start: number, end?: number): number[] {
+  const out = [];
 
-    if (end === undefined) {
-        end = start;
-        start = 0;
-    }
+  if (end === undefined) {
+    end = start;
+    start = 0;
+  }
 
-    for (let i = start; i < end; i++) {
-        out.push(i);
-    }
+  for (let i = start; i < end; i++) {
+    out.push(i);
+  }
 
-    return out;
+  return out;
 }

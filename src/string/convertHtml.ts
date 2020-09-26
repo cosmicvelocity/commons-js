@@ -8,9 +8,7 @@
 import nl2br, { INl2brOptions } from "./nl2br";
 import url2anchor, { IUrl2anchorOptions } from "./url2anchor";
 
-interface IConvertHtmlOptions extends INl2brOptions, IUrl2anchorOptions {
-
-}
+interface IConvertHtmlOptions extends INl2brOptions, IUrl2anchorOptions {}
 
 /**
  * 文字列の改行を <br/> に変換しつつ、URL をリンクにします。
@@ -23,10 +21,14 @@ interface IConvertHtmlOptions extends INl2brOptions, IUrl2anchorOptions {
  *      className : アンカーに付与するスタイル。
  * @returns 改行が <br/> に変換された文字列、もしくは null 。
  */
-export default function(s: string, defaultValue?: string, options?: IConvertHtmlOptions): string {
-    if (s) {
-        return url2anchor(nl2br(s, defaultValue, options), defaultValue, options);
-    } else {
-        return defaultValue || "";
-    }
+export default function (
+  s: string,
+  defaultValue?: string,
+  options?: IConvertHtmlOptions
+): string {
+  if (s) {
+    return url2anchor(nl2br(s, defaultValue, options), defaultValue, options);
+  } else {
+    return defaultValue || "";
+  }
 }

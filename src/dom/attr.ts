@@ -13,13 +13,17 @@
  * @param defaultValue 属性がなかった場合のデフォルト文字列。
  * @returns 属性の値、もしくはデフォルト文字列。
  */
-export default function(node: Element | null, name: string, defaultValue: string = ""): string {
-    const attr = (node && node.attributes) ?
-        node.attributes.getNamedItem(name) : null;
+export default function (
+  node: Element | null,
+  name: string,
+  defaultValue = ""
+): string {
+  const attr =
+    node && node.attributes ? node.attributes.getNamedItem(name) : null;
 
-    if (attr) {
-        return attr.textContent || "";
-    } else {
-        return defaultValue;
-    }
+  if (attr) {
+    return attr.textContent || "";
+  } else {
+    return defaultValue;
+  }
 }

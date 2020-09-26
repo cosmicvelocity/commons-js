@@ -15,12 +15,16 @@ import attr from "./attr";
  * @param defaultValue 属性がなかった場合のデフォルト値。
  * @returns 属性の値、もしくはデフォルト値。
  */
-export default function(node: Element | null, name: string, defaultValue: number = 0): number {
-    const value = attr(node, name);
+export default function (
+  node: Element | null,
+  name: string,
+  defaultValue = 0
+): number {
+  const value = attr(node, name);
 
-    if (value) {
-        return parseInt(value, 10);
-    } else {
-        return defaultValue;
-    }
+  if (value) {
+    return parseInt(value, 10);
+  } else {
+    return defaultValue;
+  }
 }

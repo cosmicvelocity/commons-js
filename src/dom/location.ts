@@ -6,13 +6,13 @@
  */
 
 interface IPoint {
-    x: number;
-    y: number;
+  x: number;
+  y: number;
 }
 
 const emptyPoint: IPoint = {
-    x: 0,
-    y: 0,
+  x: 0,
+  y: 0,
 };
 
 /**
@@ -21,16 +21,16 @@ const emptyPoint: IPoint = {
  * @param element 対象の要素。
  * @returns 要素の絶対位置。
  */
-export default function(element: Element | null): IPoint {
-    if (element && element.ownerDocument && element.ownerDocument.defaultView) {
-        const rect = element.getBoundingClientRect();
-        const view = element.ownerDocument.defaultView;
+export default function (element: Element | null): IPoint {
+  if (element && element.ownerDocument && element.ownerDocument.defaultView) {
+    const rect = element.getBoundingClientRect();
+    const view = element.ownerDocument.defaultView;
 
-        return {
-            x: rect.left + view.pageXOffset,
-            y: rect.top + view.pageYOffset,
-        };
-    } else {
-        return emptyPoint;
-    }
+    return {
+      x: rect.left + view.pageXOffset,
+      y: rect.top + view.pageYOffset,
+    };
+  } else {
+    return emptyPoint;
+  }
 }

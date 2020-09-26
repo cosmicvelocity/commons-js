@@ -11,6 +11,6 @@
  * @param value 対象の値。
  * @returns NaN である場合 true, それ以外は false 。
  */
-export default function(value: any): boolean {
-    return typeof value === "number" && value !== value;
+export default function (value: any): boolean {
+  return typeof value === "number" && value !== value;
 }

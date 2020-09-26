@@ -12,10 +12,10 @@
  * @param defaultValue s が有効な文字列ではない場合のデフォルト文字列。
  * @returns 小文字にされた文字列、またはデフォルト文字列。
  */
-export default function(s: any, defaultValue: string = ""): string {
-    if (s) {
-        return s.toLowerCase();
-    } else {
-        return defaultValue;
-    }
+export default function (s: any, defaultValue = ""): string {
+  if (s) {
+    return s.toLowerCase();
+  } else {
+    return defaultValue;
+  }
 }

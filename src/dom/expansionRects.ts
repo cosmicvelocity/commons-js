@@ -9,21 +9,21 @@ import max from "../array/max";
 import min from "../array/min";
 
 interface IRect {
-    bottom: number;
-    height: number;
-    left: number;
-    right: number;
-    top: number;
-    width: number;
+  bottom: number;
+  height: number;
+  left: number;
+  right: number;
+  top: number;
+  width: number;
 }
 
 const emptyRect: IRect = {
-    bottom: 0,
-    height: 0,
-    left: 0,
-    right: 0,
-    top: 0,
-    width: 0,
+  bottom: 0,
+  height: 0,
+  left: 0,
+  right: 0,
+  top: 0,
+  width: 0,
 };
 
 /**
@@ -36,30 +36,31 @@ const emptyRect: IRect = {
  * @param marginY 縦の拡張分。
  * @returns 領域を表すオブジェクト。
  */
-export default function(
-    arr: ClientRect[],
-    offsetX: number = 0,
-    offsetY: number = 0,
-    marginX: number = 0,
-    marginY: number = 0): IRect {
+export default function (
+  arr: ClientRect[],
+  offsetX = 0,
+  offsetY = 0,
+  marginX = 0,
+  marginY = 0
+): IRect {
+  if (!Array.isArray(arr)) {
+    return emptyRect;
+  }
 
-    if (!Array.isArray(arr)) {
-        return emptyRect;
-    }
+  const left = min(arr, (x, y) => x.left - y.left).left + offsetX;
+  const top = min(arr, (x, y) => x.top - y.top).top + offsetY;
+  const right = max(arr, (x, y) => x.right - y.right).right + offsetX + marginX;
+  const bottom =
+    max(arr, (x, y) => x.bottom - y.bottom).bottom + offsetY + marginY;
+  const width = right - left;
+  const height = bottom - top;
 
-    const left = min(arr, (x, y) => x.left - y.left).left + offsetX;
-    const top = min(arr, (x, y) => x.top - y.top).top + offsetY;
-    const right = max(arr, (x, y) => x.right - y.right).right + offsetX + marginX;
-    const bottom = max(arr, (x, y) => x.bottom - y.bottom).bottom + offsetY + marginY;
-    const width = right - left;
-    const height = bottom - top;
-
-    return {
-        bottom,
-        height,
-        left,
-        right,
-        top,
-        width,
-    };
+  return {
+    bottom,
+    height,
+    left,
+    right,
+    top,
+    width,
+  };
 }

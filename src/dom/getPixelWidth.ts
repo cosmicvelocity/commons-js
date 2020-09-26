@@ -11,18 +11,18 @@
  * @param width 幅を表す文字列。
  * @return ピクセルで表した値。
  */
-export default function(width: string): number {
-    // 幅を設定したダミーの要素を追加し、
-    // そのサイズがどうなったかを得る事でピクセル値に換算します。
-    const tmp = document.createElement("div");
+export default function (width: string): number {
+  // 幅を設定したダミーの要素を追加し、
+  // そのサイズがどうなったかを得る事でピクセル値に換算します。
+  const tmp = document.createElement("div");
 
-    tmp.style.width = width;
+  tmp.style.width = width;
 
-    document.body.appendChild(tmp);
+  document.body.appendChild(tmp);
 
-    const pixelWidth = tmp.offsetWidth;
+  const pixelWidth = tmp.offsetWidth;
 
-    document.body.removeChild(tmp);
+  document.body.removeChild(tmp);
 
-    return pixelWidth || 0;
+  return pixelWidth || 0;
 }

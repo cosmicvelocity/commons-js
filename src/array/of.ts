@@ -10,6 +10,6 @@
  *
  * @returns 初期化された配列。
  */
-export default function(...arr: any): any[] {
-    return arr;
+export default function (...arr: any): any[] {
+  return arr;
 }

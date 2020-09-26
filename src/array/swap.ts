@@ -14,19 +14,28 @@
  * @param length 移動する要素数。
  * @returns 要素の移動を行った配列。
  */
-export default function(array: any[], from: number, to: number, length: number = 1): any[] {
-    if (from === to || from > array.length - length || to > array.length - length) {
-        return array;
-    }
-
-    const values = array.slice(from, from + length);
-    const tail = array.slice(from + length);
-
-    array.splice(from);
-
-    Array.prototype.push.apply(array, tail);
-
-    array.splice(to, 0, ...values);
-
+export default function (
+  array: any[],
+  from: number,
+  to: number,
+  length = 1
+): any[] {
+  if (
+    from === to ||
+    from > array.length - length ||
+    to > array.length - length
+  ) {
     return array;
+  }
+
+  const values = array.slice(from, from + length);
+  const tail = array.slice(from + length);
+
+  array.splice(from);
+
+  Array.prototype.push.apply(array, tail);
+
+  array.splice(to, 0, ...values);
+
+  return array;
 }

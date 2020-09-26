@@ -7,6 +7,7 @@
 
 import attr from "./dom/attr";
 import attrAsNumber from "./dom/attrAsNumber";
+import clearSelection from "./dom/clearSelection";
 import expansionRects from "./dom/expansionRects";
 import getBoundingClientRect from "./dom/getBoundingClientRect";
 import getBoundingClientRects from "./dom/getBoundingClientRects";
@@ -21,6 +22,7 @@ import text from "./dom/text";
 export default {
     attr,
     attrAsNumber,
+    clearSelection,
     expansionRects,
     getBoundingClientRect,
     getBoundingClientRects,

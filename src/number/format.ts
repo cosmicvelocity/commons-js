@@ -16,12 +16,12 @@ const compileNumber = new RegExp("(\\d)(?=(\\d\\d\\d)+(?!\\d))", "g");
  * @param defaultValue 値が null や数値、数字文字列ではない場合に返されるデフォルト値。
  * @returns フォーマットされた文字列。
  */
-export default function(value: any, defaultValue: string = ""): string {
-    const s = String(value);
+export default function (value: any, defaultValue = ""): string {
+  const s = String(value);
 
-    if (!isNullOrEmpty(s) && compileNumber.test(s)) {
-        return s.replace(compileNumber, "$1,");
-    } else {
-        return defaultValue;
-    }
+  if (!isNullOrEmpty(s) && compileNumber.test(s)) {
+    return s.replace(compileNumber, "$1,");
+  } else {
+    return defaultValue;
+  }
 }

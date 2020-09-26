@@ -11,6 +11,6 @@
  * @param value 確認対象の値。
  * @returns 配列である場合 true, それ以外は false 。
  */
-export default function(value: any): boolean {
-    return Object.prototype.toString.call(value) === "[object Array]";
+export default function (value: any): boolean {
+  return Object.prototype.toString.call(value) === "[object Array]";
 }

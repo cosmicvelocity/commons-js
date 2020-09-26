@@ -13,16 +13,20 @@
  * @param defaultValue 取得できなかった場合のデフォルト値。
  * @returns セレクタに該当するノードのテキスト、もしくはデフォルト値。
  */
-export default function(element: ParentNode | null, selector: string, defaultValue: string = ""): string {
-    if (element) {
-        const node = element.querySelector(selector);
+export default function (
+  element: ParentNode | null,
+  selector: string,
+  defaultValue = ""
+): string {
+  if (element) {
+    const node = element.querySelector(selector);
 
-        if (node !== null) {
-            return node.textContent || "";
-        } else {
-            return defaultValue;
-        }
+    if (node !== null) {
+      return node.textContent || "";
     } else {
-        return defaultValue;
+      return defaultValue;
     }
+  } else {
+    return defaultValue;
+  }
 }

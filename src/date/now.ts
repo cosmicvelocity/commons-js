@@ -15,6 +15,9 @@ import formatFunction from "./format";
  * @param locale 指定する場合、ロケール名。
  * @returns 現在日時を書式化した文字列。
  */
-export default function(format: string = defaultFormatPattern, locale?: string): string {
-    return formatFunction(new Date(), undefined, format, locale);
+export default function (
+  format: string = defaultFormatPattern,
+  locale?: string
+): string {
+  return formatFunction(new Date(), undefined, format, locale);
 }

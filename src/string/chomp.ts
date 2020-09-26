@@ -13,24 +13,24 @@ import isEmpty from "./isEmpty";
  * @param s 対象の文字列。
  * @returns 行末の改行が除去された文字列。
  */
-export default function(s: string): string {
-    if (isEmpty(s)) {
-        return s;
+export default function (s: string): string {
+  if (isEmpty(s)) {
+    return s;
+  }
+
+  let lastIndex = s.length - 1;
+
+  if (s[lastIndex] === "\n") {
+    if (s[lastIndex - 1] === "\r") {
+      lastIndex--;
     }
+  } else if (s[lastIndex] !== "\r") {
+    lastIndex++;
+  }
 
-    let lastIndex = s.length - 1;
+  if (s.length === lastIndex) {
+    return s;
+  }
 
-    if (s[lastIndex] === "\n") {
-        if (s[lastIndex - 1] === "\r") {
-            lastIndex--;
-        }
-    } else if (s[lastIndex] !== "\r") {
-        lastIndex++;
-    }
-
-    if (s.length === lastIndex) {
-        return s;
-    }
-
-    return s.substr(0, lastIndex);
+  return s.substr(0, lastIndex);
 }

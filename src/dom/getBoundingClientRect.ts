@@ -11,10 +11,10 @@
  * @param element 対象の要素。
  * @returns 対象の領域。
  */
-export default function(element: Element | null): DOMRect {
-    if (element && element.getBoundingClientRect) {
-        return element.getBoundingClientRect() as DOMRect || {} as DOMRect;
-    } else {
-        return {} as DOMRect;
-    }
+export default function (element: Element | null): DOMRect {
+  if (element && element.getBoundingClientRect) {
+    return (element.getBoundingClientRect() as DOMRect) || ({} as DOMRect);
+  } else {
+    return {} as DOMRect;
+  }
 }

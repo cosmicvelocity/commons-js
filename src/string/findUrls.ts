@@ -7,7 +7,8 @@
 
 import isNullOrEmpty from "./isNullOrEmpty";
 
-const compileUrl = new RegExp("(https?)(:\/\/[^\\s　\\|]+)", "g");
+// eslint-disable-next-line no-useless-escape
+const compileUrl = new RegExp("(https?)(://[^\\s　\\|]+)", "g");
 
 /**
  * 指定した文字列に含まれる URL を検索して取得します。
@@ -15,18 +16,18 @@ const compileUrl = new RegExp("(https?)(:\/\/[^\\s　\\|]+)", "g");
  * @param s 対象の文字列。
  * @returns 文字列に含まれる URL を保持した配列。
  */
-export default function(s: string): string[] {
-    if (isNullOrEmpty(s)) {
-        return [];
-    }
+export default function (s: string): string[] {
+  if (isNullOrEmpty(s)) {
+    return [];
+  }
 
-    const urls = [];
-    let matches: any;
+  const urls = [];
+  let matches: any;
 
-    // tslint:disable-next-line: no-conditional-assignment
-    while ((matches = compileUrl.exec(s)) !== null) {
-        urls.push(matches[0]);
-    }
+  // tslint:disable-next-line: no-conditional-assignment
+  while ((matches = compileUrl.exec(s)) !== null) {
+    urls.push(matches[0]);
+  }
 
-    return urls;
+  return urls;
 }

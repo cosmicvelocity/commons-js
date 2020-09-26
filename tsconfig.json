@@ -2,14 +2,16 @@
     "compilerOptions": {
         "declaration": true,
         "esModuleInterop": true,
-        "module": "umd",
+        "module": "commonjs",
         "moduleResolution": "node",
         "newLine": "lf",
         "outDir": "build",
         "pretty": true,
         "skipLibCheck": true,
         "strict": true,
-        "target": "esnext"
+        "target": "es2018"
     },
-    "include": ["**/*.ts"]
+    "include": [
+        "**/*.ts"
+    ]
 }

@@ -8,9 +8,9 @@
 "use strict";
 
 export interface IUrl2anchorOptions {
-    className?: string;
-    isXML: boolean;
-    target: string;
+  className?: string;
+  isXML: boolean;
+  target: string;
 }
 
 /**
@@ -24,23 +24,34 @@ export interface IUrl2anchorOptions {
  *      className : アンカーに付与するスタイル。
  * @returns URL がアンカーに変換された文字列、もしくはデフォルト文字列。
  */
-export default function(s: any, defaultValue: string = "", options?: IUrl2anchorOptions): string {
-    if (s) {
-        const opt = Object.assign({}, {
-            className: null,
-            isXML: true,
-            target: "_self",
-        }, options);
+export default function (
+  s: any,
+  defaultValue = "",
+  options?: IUrl2anchorOptions
+): string {
+  if (s) {
+    const opt = Object.assign(
+      {},
+      {
+        className: null,
+        isXML: true,
+        target: "_self",
+      },
+      options
+    ) as IUrl2anchorOptions;
 
-        return s
-            .replace(/(https?)(:\/\/[^\s　]+)/g, (match: any) => {
-                if (opt.className) {
-                    return `<a href="${match}" target="${opt.target}" class="${opt.className}">${match}</a>`;
-                } else {
-                    return `<a href="${match}" target="${opt.target}">${match}</a>`;
-                }
-            });
-    } else {
-        return defaultValue;
-    }
+    return (
+      s
+        // eslint-disable-next-line no-irregular-whitespace
+        .replace(/(https?)(:\/\/[^\s　]+)/g, (match: any) => {
+          if (opt.className) {
+            return `<a href="${match}" target="${opt.target}" class="${opt.className}">${match}</a>`;
+          } else {
+            return `<a href="${match}" target="${opt.target}">${match}</a>`;
+          }
+        })
+    );
+  } else {
+    return defaultValue;
+  }
 }

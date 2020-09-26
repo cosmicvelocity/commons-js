@@ -12,6 +12,6 @@
  * @param value 追加する要素を保持した配列。
  * @returns 要素が追加された配列。
  */
-export default function(array: any[], value: any): any[] {
-    return array.concat(...value);
+export default function <T>(array: T[], value: T[]): T[] {
+  return array.concat(...value);
 }

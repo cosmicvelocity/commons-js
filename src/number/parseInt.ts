@@ -15,12 +15,12 @@ import isNaN from "./isNaN";
  * @param defaultValue 数値に変換できない場合などに用いられるデフォルト値。
  * @returns 変換された数値。
  */
-export default function(value: any, defaultValue: number = 0): number {
-    if (!isNullOrEmpty(value)) {
-        const n = parseInt(value, 10);
+export default function (value: any, defaultValue = 0): number {
+  if (!isNullOrEmpty(value)) {
+    const n = parseInt(value, 10);
 
-        return !isNaN(n) ? n : defaultValue;
-    } else {
-        return defaultValue;
-    }
+    return !isNaN(n) ? n : defaultValue;
+  } else {
+    return defaultValue;
+  }
 }

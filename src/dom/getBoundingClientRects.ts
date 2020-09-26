@@ -14,22 +14,25 @@ import getBoundingClientRect from "./getBoundingClientRect";
  * @param selector 対象とする要素のセレクタ。
  * @returns 取得した領域の配列。
  */
-export default function(element: ParentNode | null, selector: string): DOMRect[] {
-    const rects = [];
+export default function (
+  element: ParentNode | null,
+  selector: string
+): DOMRect[] {
+  const rects = [];
 
-    if (element) {
-        const nodes = element.querySelectorAll(selector);
+  if (element) {
+    const nodes = element.querySelectorAll(selector);
 
-        // tslint:disable-next-line: prefer-for-of
-        for (let index = 0; index < nodes.length; index++) {
-            const node = nodes[index];
-            const rect = getBoundingClientRect(node);
+    // tslint:disable-next-line: prefer-for-of
+    for (let index = 0; index < nodes.length; index++) {
+      const node = nodes[index];
+      const rect = getBoundingClientRect(node);
 
-            if (rect) {
-                rects.push(rect);
-            }
-        }
+      if (rect) {
+        rects.push(rect);
+      }
     }
+  }
 
-    return rects;
+  return rects;
 }
